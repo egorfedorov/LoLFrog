@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<widget xmlns = "http://www.w3.org/ns/widgets"
-    xmlns:gap = "http://phonegap.com/ns/1.0"
-    id        = "de.codefrog.lolfrog"
-    version   = "1.0.0">
-
-<name>LoLFrog</name>
-
-<description>
-A simple application to read informations about champions from league of legends.
-</description>
-
-<author href="https://mncodefrog.github.com" email="m.neundorf@codefrog.de">
-Mohammed Neundorf
-</author>
-
+<widget xmlns = "http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0" id = "de.codefrog.lolfrog" version = "1.0.1">
+    
+    <name>LoLFrog</name>
+    <description>A simple application to read informations about champions from league of legends.</description>
+    <author href="https://mncodefrog.github.com" email="m.neundorf@codefrog.de">Mohammed Neundorf</author>
+    
+    <icon src="icon.png" />
+    
 </widget>
