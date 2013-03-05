@@ -4,21 +4,61 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        <link rel="stylesheet" type="text/css" href="js/jquery/jquery.mobile-1.3.0.min.css">
+        <link rel="stylesheet" type="text/css" href="js/jquery/jquery.mobile.structure-1.3.0.min.css">
+
+        <!-- PHONEGAP
+        <script type="text/javascript" src="phonegap.js"></script>
+        <!-- PHONEGAP END -->
+        <title>LoLFrog</title>
     </head>
     <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready">
-                <p class="status pending blink">Connecting to Device</p>
-                <p class="status complete blink hide">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
+        <div data-role="page" id="main"> 
+            <div data-role="header">
+                <h2>LoL Champions</h2>
+            </div> 
+            <div data-role="content">
+                <ul data-role="listview" class="championList"  data-filter="true" data-filter-placeholder="Suche Champion..." data-autodividers="true">
+                    <!--
+                    <li><a href="#detail" data-transition="slide">Acura</a></li>
+                    <li><a href="#detail" data-transition="slide">Audi</a></li>
+                    <li><a href="#detail" data-transition="slide">BMW</a></li>
+                    -->
+                </ul>
+            </div> 
+            <div data-role="footer">
+                <h4>LoLFrog &copy; 2013 MNCF Dev</h4>
+            </div> 
+        </div> 
+
+        <div data-role="page" id="detail"> 
+            <div data-role="header">
+                <a data-rel="back">Back</a>
+                <h2 id="detailTitle"></h2>
+            </div> 
+            <div data-role="content" id="detailContent">
+
+            </div> 
+            <div data-role="footer">
+                <h4>LoLFrog &copy; 2013 MNCF Dev</h4>
+            </div> 
+        </div> 
+        <script type="text/javascript" src="js/libs/underscore-min.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.mobile-1.3.0.min.js"></script>
+        <script type="text/javascript" src="js/libs/backbone-min.js"></script>
+        
+        <script type="text/javascript" src="js/lolfrog.js"></script>
+
+        <script id="championListTemplate" type="text/template">
+            <li>
+                <a href="#detail?<%= name %>" data-transition="slide">
+                    <img src="http://www.github.local/LoLFrog-Server/?action=icon&url=<%= icon %>">
+                    <h2><%= name %></h2>
+                    <p><%= subtitle %></p>
+                </a>
+            </li>
         </script>
+
     </body>
 </html>
