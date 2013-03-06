@@ -47,7 +47,7 @@ var Champion = Backbone.Model.extend({
 
 var ChampionCollection = Backbone.Collection.extend({
 	model: Champion,
-	url: 'http://www.github.local/LoLFrog-Server/'
+	url: 'http://www.ninevillage.de/lolfrog/'
 });
 
 var ChampionView = Backbone.View.extend({
@@ -93,7 +93,7 @@ var ChampionListView = Backbone.View.extend({
 		_(this._championViews).each(function(dv) {
 
 			var template = _.template( $("#championListTemplate").html() );
-			console.log(dv.model.toJSON());
+			
 			//$(that.el).append(dv.render().el);
 
 			$(that.el).append(template(dv.model.toJSON())).listview('refresh').trigger('create');
